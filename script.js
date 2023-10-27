@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 
-                    // Function to create a new task
+    // Function to create a new task
     function createTask(task) {
         const task_el = document.createElement('div');
         task_el.classList.add('task');
@@ -60,9 +60,9 @@ window.addEventListener('load', () => {
                 
         task_edit_el.addEventListener('click', () => {
             if (task_edit_el.innerText.toLowerCase() === 'Edit') {
-                    task_el_input.removeAttribute('readonly');
-                    task_el_input.focus();
-                    task_edit_el.innerText = 'Save';
+                task_el_input.removeAttribute('readonly');
+                task_el_input.focus();
+                task_edit_el.innerText = 'Save';
             } else {
                 task_el_input.setAttribute('readonly', 'readonly');
                 task_edit_el.innerText = 'Edit';
@@ -79,6 +79,7 @@ window.addEventListener('load', () => {
                 hideConfirmationModal();
                 saveTasksToLocalStorage();
             });
+            document.getElementById('cancelButton').addEventListener('click', hideConfirmationModal)
         });
                 
         task_done_el.addEventListener('click', () => {
