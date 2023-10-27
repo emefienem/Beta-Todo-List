@@ -20,6 +20,7 @@ body{
     min-height: 100vh;
     background: var(--dark);
     color: #FFF;
+    overflow: auto;
 }
 
 header{
@@ -91,6 +92,7 @@ main{
 .task-list{
     padding: 1rem;
 }
+
 .task-list h2{
     font-size: 1.5rem;
     font-weight: 300;
@@ -156,4 +158,32 @@ main{
 
 .task .actions .done{
     color: green;
+}
+
+@media (max-width:799px) {
+    #new-task-input{
+        width: 40px;
+    }
+    #new-task-input::placeholder{
+        font-size: 15px;
+    }
+
+    #new-task-submit{
+        color: var(--pink);
+        font-size: 1.25rem;
+        font-weight: 700;
+        background-image: linear-gradient(to right, var(--pink), var(--purple));
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .task-list{
+        overflow-x: auto;
+    }
+
+    #tasks .task .content .text{
+        overflow-x: auto;
+        width: 200%;
+    }
 }
