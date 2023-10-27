@@ -160,6 +160,52 @@ main{
     color: green;
 }
 
+/* Modal styling */
+.modal{
+    display:none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform: translate(-50, -50%);
+    background: #fff;
+    color: var(--dark);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+.ctr-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.ctr-btn button{
+    background-color: var(--purple);
+    border-radius: 5px;
+    color: var(--light);
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ctr-btn button:hover{
+    transform: translateY(5px);
+}
+
 @media (max-width:799px) {
     #new-task-input{
         width: 40px;
